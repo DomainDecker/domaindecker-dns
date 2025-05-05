@@ -8,7 +8,7 @@ router = APIRouter()
 def whois_lookup(domain: str):
     return fetch_whois(domain)
 
-@router.get("/verify-txt/{domain}")
+@router.get("/verify-code/{domain}")
 def verify_txt_record(domain: str, verification: str = Query(..., description="TXT record verification value")):
     verified = verify_txt(domain, verification)
     return {"verified": verified}
