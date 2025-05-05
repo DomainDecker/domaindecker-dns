@@ -2,3 +2,4 @@ fastapi
 uvicorn
 python-whois
 dnspython
+python-dotenv
